@@ -1,5 +1,18 @@
 import "./globals.css";
+import { Albert_Sans, Montserrat_Alternates } from "next/font/google"
 /* eslint-disable @next/next/no-img-element */
+
+const albertSans = Albert_Sans({
+  subsets: ["latin"],
+  display: "swap"
+})
+
+const montserratAlternates = Montserrat_Alternates({
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  variable: "--font-montserrat-alternates"
+})
 
 
 export default function RootLayout({
@@ -10,7 +23,7 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <body>
+      <body className={`${albertSans.className} ${montserratAlternates.variable}`}>
         <header className="w-full bg-white">
           <nav className="flex justify-between px-6 py-4">
             <div className="relative">
