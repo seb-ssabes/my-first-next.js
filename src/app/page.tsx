@@ -22,7 +22,13 @@ export default function Home() {
             </button>
           </div>
         </div>
-        <Image src="/home.png" alt="home-image" width={350} height={350} />
+        <Image
+          src="/home.png"
+          alt="home-image"
+          width={2151}
+          height={2151}
+          className="w-90 h-auto"
+        />
       </section>
     </main>
   )

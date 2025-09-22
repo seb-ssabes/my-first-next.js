@@ -13,8 +13,9 @@ export default function About() {
             <Image
               src="/about.png"
               alt="About image"
-              fill
-              className="object-contain"
+              width={3000}
+              height={4000}
+              className="absolute inset-0 w-full h-full object-cover rounded-lg"
             />
           </div>
 
