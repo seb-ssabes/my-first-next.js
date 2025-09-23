@@ -48,3 +48,8 @@ export type PillProps = {
   children: ReactNode
   className?: string
 }
+
+export type NavLinkProps = {
+  href: string
+  children: ReactNode
+}

@@ -1,5 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
+import NavLink from "./NavLink"
+
 
 
 export default function Navbar() {
@@ -25,8 +27,8 @@ export default function Navbar() {
           </Link>
         </div>
         <ul className="flex items-center gap-2.5">
-          <li><Link href="/3d-models">3D MODELS</Link></li>
-          <li><Link href="/about">About</Link></li>
+          <NavLink href="/3d-models">3D Models</NavLink>
+          <NavLink href="/about">About</NavLink>
         </ul>
       </nav>
     </header>
