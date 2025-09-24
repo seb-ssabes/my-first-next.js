@@ -1,14 +1,11 @@
-"use client"
 
 import { getAllCategories } from "../lib/categories"
 import type { Category } from "@/app/types"
-import { usePathname } from "next/navigation"
 import NavLink from "./NavLink"
 
 
 export default function ModelsNavbar() {
   const categories: Category[] = getAllCategories()
-  const pathname = usePathname()
 
   return (
     <aside className="sticky top-0 z-10 w-full bg-white border-b border-gray-200 md:fixed md:w-64 md:top-1/2 md:-translate-y-1/2 md:border-none">
