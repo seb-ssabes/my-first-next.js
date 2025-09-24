@@ -1,11 +1,13 @@
-
+"use client"
 import { getAllCategories } from "../lib/categories"
 import type { Category } from "@/app/types"
 import NavLink from "./NavLink"
+import { usePathname } from "next/navigation"
 
 
 export default function ModelsNavbar() {
   const categories: Category[] = getAllCategories()
+  const pathname = usePathname()
 
   return (
     <aside className="sticky top-0 z-10 w-full bg-white border-b border-gray-200 md:fixed md:w-64 md:top-1/2 md:-translate-y-1/2 md:border-none">
@@ -14,6 +16,7 @@ export default function ModelsNavbar() {
           <ul className="flex px-4 py-3 space-x-4 whitespace-nowrap md:flex-col md:p-0 md:space-x-0 md:space-y-3">
             <NavLink
               href="/3d-models"
+              isActive={pathname === "/3d-models"}
             >
               All
             </NavLink>
@@ -21,6 +24,7 @@ export default function ModelsNavbar() {
               <NavLink
                 href={`/3d-models/categories/${item.slug}`}
                 key={item.slug}
+                isActive={pathname === `/3d-models/categories/${item.slug}`}
               >
                 {item.displayName}
               </NavLink>

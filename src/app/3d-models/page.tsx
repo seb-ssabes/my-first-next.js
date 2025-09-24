@@ -1,8 +1,8 @@
-import { getAllModels } from "@/app/lib/models"
+import { getModels } from "@/app/lib/models"
 import ModelsGrid from "../components/ModelsGrid"
 
-export default async function ModelsPage({children}) {
-  const models = await getAllModels()
+export default async function ModelsPage() {
+  const models = await getModels()
   return (
     <ModelsGrid title="3D Models" models={models} />
   )
