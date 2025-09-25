@@ -35,7 +35,7 @@ export type CategoryPageProps = {
 
 export type ModelsPageProps = {
   searchParams: {
-    q?: string
+    search?: string
   }
 }
 
