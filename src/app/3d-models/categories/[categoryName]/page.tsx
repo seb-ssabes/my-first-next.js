@@ -12,6 +12,7 @@ export default async function CategoryName({params}:CategoryPageProps) {
 
   const { categoryName } = await params
   const category = getCategoryBySlug(categoryName)
+  
   const models = await getModels({category: categoryName})
 
   return (
